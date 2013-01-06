@@ -1,0 +1,36 @@
+<project name="BlackJackTrack" default="dist" basedir=".">
+	<property name="dist-dir" location="/var/www/blackjack" />
+	<property name="php-common-dir" location="/var/www/php-common" />
+	
+	<target name="dist">
+		<move file="${dist-dir}" tofile="${dist-dir}_${DSTAMP}" failonerror="false"/>
+		<mkdir dir="${dist-dir}" />
+		<copy todir="${dist-dir}">
+			<fileset dir=".">
+				<include name="pages/**" />
+		        <include name="images/**" />
+				<include name="css/**" />
+				<include name="js/**" />
+				<include name="data-access/**" />
+				<include name="rule/**" />
+				<include name="config/blackjack.conf" />
+				<include name="config/init.php" />
+			</fileset>
+			
+		</copy>
+		<mkdir dir="${php-common-dir}" />
+		<copy todir="${php-common-dir}">
+			<fileset dir="../../php-common" />
+		</copy>
+	</target>
+	
+	<target name="dist-php-common">
+		<move file="${php-common-dir}" tofile="{php-common-dir}_${DSTAMP}" failonerror="false"/>
+		<mkdir dir="${php-common-dir}" />
+		<copy todir="${php-common-dir}">
+			<fileset dir="../../php-common" />
+		</copy>
+	</target>
+	
+	
+</project>

@@ -1,0 +1,72 @@
+body {
+	font-family: lucida-sans, sans-serif; 
+	font-size: 10pt; 
+	font-style: normal; 
+	font-variant: normal; 
+	background-color: #000000;
+}
+
+input {
+	margin: 0px 0px 10px 0px; 
+}
+
+a:link {
+	color: white;
+}
+
+a:visited {
+	color: white;
+}
+
+.main_content {
+	text-align: left;
+	color: white;
+	vertical-align: top;
+	background-color: #000000;
+}
+
+.main_logo {
+	margin: 20px 0px 0px 5px; 
+}
+
+.menu_separator {
+	margin: 0px 15px 0px 15px;
+}
+
+.menu_bar {
+	text-align: right;
+	margin: 0px 50px 0px 0px;
+}
+
+.menu_item {
+	margin: 0px 10px 0px 30px;
+}
+
+.error_message {
+	color: red;
+	margin: 0px 0px 10px 0px; 
+}
+
+.form_label {
+	float: left;
+	color: white;
+	width:100px;
+}
+
+.error_banner {
+	font-size: 12pt; 
+	margin: 5px 0px 0px 100px;
+	color: #660033;	
+}
+
+.warning_banner {
+	font-size: 12pt; 
+	margin: 5px 0px 0px 100px;
+	color: #FFCC00;	
+}
+
+.info_banner {
+	font-size: 12pt; 
+	margin: 5px 0px 0px 100px;
+	color: white;	
+}
