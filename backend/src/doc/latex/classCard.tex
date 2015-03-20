@@ -1,0 +1,101 @@
+\hypertarget{classCard}{
+\section{\-Card \-Class \-Reference}
+\label{classCard}\index{\-Card@{\-Card}}
+}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCard_ae994fc5704b80f4d0940215e5a222fa7}{\-Card} (int position)
+\item 
+int \hyperlink{classCard_aaf61bd6e3d4c152143475e2a380ae697}{get\-Numeric\-Value} ()
+\item 
+\-Card\-Index \hyperlink{classCard_a85a91231211fe59bcc548f911004e673}{get\-Index} ()
+\item 
+int \hyperlink{classCard_ad00a371f6e048ce54fd07ac2e205cb60}{get\-Position} ()
+\item 
+bool \hyperlink{classCard_a573ca0c92e6c12cf8f932850631d9449}{is\-Ace} ()
+\item 
+void \hyperlink{classCard_ab1114b3d7d2a1e26a31ad5ea0c4d40d6}{display} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCard_af9959ebe78ea54db05196574b18e0d61}{
+static std\-::string {\bfseries get\-Card\-Name} (int name\-Index)}
+\label{classCard_af9959ebe78ea54db05196574b18e0d61}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classCard_ae994fc5704b80f4d0940215e5a222fa7}{
+\index{\-Card@{\-Card}!\-Card@{\-Card}}
+\index{\-Card@{\-Card}!Card@{\-Card}}
+\subsubsection[{\-Card}]{\setlength{\rightskip}{0pt plus 5cm}\-Card\-::\-Card (
+\begin{DoxyParamCaption}
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)}}
+\label{classCard_ae994fc5704b80f4d0940215e5a222fa7}
+\-Creates a \hyperlink{classCard}{\-Card} object initialized with suit and value 
+\begin{DoxyParams}{\-Parameters}
+{\em position} & \-An integer number between 0 and 51 inclusive representing the position in a deck that is sorted \-A-\/\-K for each suit \-C,\-H,\-D and \-S. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classCard_ab1114b3d7d2a1e26a31ad5ea0c4d40d6}{
+\index{\-Card@{\-Card}!display@{display}}
+\index{display@{display}!Card@{\-Card}}
+\subsubsection[{display}]{\setlength{\rightskip}{0pt plus 5cm}void \-Card\-::display (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classCard_ab1114b3d7d2a1e26a31ad5ea0c4d40d6}
+display this card object to the log file as debug \hypertarget{classCard_a85a91231211fe59bcc548f911004e673}{
+\index{\-Card@{\-Card}!get\-Index@{get\-Index}}
+\index{get\-Index@{get\-Index}!Card@{\-Card}}
+\subsubsection[{get\-Index}]{\setlength{\rightskip}{0pt plus 5cm}\-Card\-Index \-Card\-::get\-Index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classCard_a85a91231211fe59bcc548f911004e673}
+\-Get index value of a card, starting at \-Ace = 0 through \-King = 12. \hypertarget{classCard_aaf61bd6e3d4c152143475e2a380ae697}{
+\index{\-Card@{\-Card}!get\-Numeric\-Value@{get\-Numeric\-Value}}
+\index{get\-Numeric\-Value@{get\-Numeric\-Value}!Card@{\-Card}}
+\subsubsection[{get\-Numeric\-Value}]{\setlength{\rightskip}{0pt plus 5cm}int \-Card\-::get\-Numeric\-Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classCard_aaf61bd6e3d4c152143475e2a380ae697}
+\-Get the numeric value of a card. \-Ace will return 1 and face values will return 10. \-All other cards will return their face value. \hypertarget{classCard_ad00a371f6e048ce54fd07ac2e205cb60}{
+\index{\-Card@{\-Card}!get\-Position@{get\-Position}}
+\index{get\-Position@{get\-Position}!Card@{\-Card}}
+\subsubsection[{get\-Position}]{\setlength{\rightskip}{0pt plus 5cm}int \-Card\-::get\-Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classCard_ad00a371f6e048ce54fd07ac2e205cb60}
+\-Get the absolute position of a card in the deck that is sorted \-A-\/\-K for each suit \-C,\-H,\-D and \-S. \hypertarget{classCard_a573ca0c92e6c12cf8f932850631d9449}{
+\index{\-Card@{\-Card}!is\-Ace@{is\-Ace}}
+\index{is\-Ace@{is\-Ace}!Card@{\-Card}}
+\subsubsection[{is\-Ace}]{\setlength{\rightskip}{0pt plus 5cm}bool \-Card\-::is\-Ace (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classCard_a573ca0c92e6c12cf8f932850631d9449}
+check if this card is an ace \begin{DoxyReturn}{\-Returns}
+bool true if this card is an ace 
+\end{DoxyReturn}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/mdaigle/\-Dropbox/\-Business/blackjack/backend/src/deck/\-Card.\-h\item 
+/home/mdaigle/\-Dropbox/\-Business/blackjack/backend/src/deck/\-Card.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,82 @@
+\hypertarget{classHand}{
+\section{\-Hand \-Class \-Reference}
+\label{d0/d25/classHand}\index{\-Hand@{\-Hand}}
+}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classHand_aa16e7edd360cbc309d5763c05541c2d0}{\-Hand} (\hyperlink{classCard}{\-Card} $\ast$card1, \hyperlink{classCard}{\-Card} $\ast$card2)
+\item 
+int \hyperlink{classHand_adf6c1fb905c4b99b5ad741e994d4b0a7}{get\-Value1} ()
+\item 
+int \hyperlink{classHand_a674336599d7f0569d5849a1ca906a4ed}{get\-Value2} ()
+\item 
+void \hyperlink{classHand_abc208a6484b462b95859fe0bb4812ce8}{add\-Card} (\hyperlink{classCard}{\-Card} $\ast$card)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classHand_aa16e7edd360cbc309d5763c05541c2d0}{
+\index{\-Hand@{\-Hand}!\-Hand@{\-Hand}}
+\index{\-Hand@{\-Hand}!Hand@{\-Hand}}
+\subsubsection[{\-Hand}]{\setlength{\rightskip}{0pt plus 5cm}\-Hand\-::\-Hand (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Card} $\ast$}]{card1, }
+\item[{{\bf \-Card} $\ast$}]{card2}
+\end{DoxyParamCaption}
+)}}
+\label{d0/d25/classHand_aa16e7edd360cbc309d5763c05541c2d0}
+\-Creates a \hyperlink{classHand}{\-Hand} object initialized with the intial two cards 
+\begin{DoxyParams}{\-Parameters}
+{\em card1} & a pointer to the first card object \\
+\hline
+{\em card2} & a pointer to the second card object \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classHand_abc208a6484b462b95859fe0bb4812ce8}{
+\index{\-Hand@{\-Hand}!add\-Card@{add\-Card}}
+\index{add\-Card@{add\-Card}!Hand@{\-Hand}}
+\subsubsection[{add\-Card}]{\setlength{\rightskip}{0pt plus 5cm}void \-Hand\-::add\-Card (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Card} $\ast$}]{card}
+\end{DoxyParamCaption}
+)}}
+\label{d0/d25/classHand_abc208a6484b462b95859fe0bb4812ce8}
+\-Add a card to the hand. \-If the card is an ace and the first card is not already an ace, this card will be added to the front of the hand. 
+\begin{DoxyParams}{\-Parameters}
+{\em card} & a pointer to the \hyperlink{classCard}{\-Card} object we want to add. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classHand_adf6c1fb905c4b99b5ad741e994d4b0a7}{
+\index{\-Hand@{\-Hand}!get\-Value1@{get\-Value1}}
+\index{get\-Value1@{get\-Value1}!Hand@{\-Hand}}
+\subsubsection[{get\-Value1}]{\setlength{\rightskip}{0pt plus 5cm}int \-Hand\-::get\-Value1 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{d0/d25/classHand_adf6c1fb905c4b99b5ad741e994d4b0a7}
+\-Get the value of the first card in the hand. \-If there is at least one ace in the hand, the first card will be an ace \begin{DoxyReturn}{\-Returns}
+int numeric value of the first card (ace will return 1 ... face cards, 10) 
+\end{DoxyReturn}
+\hypertarget{classHand_a674336599d7f0569d5849a1ca906a4ed}{
+\index{\-Hand@{\-Hand}!get\-Value2@{get\-Value2}}
+\index{get\-Value2@{get\-Value2}!Hand@{\-Hand}}
+\subsubsection[{get\-Value2}]{\setlength{\rightskip}{0pt plus 5cm}int \-Hand\-::get\-Value2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{d0/d25/classHand_a674336599d7f0569d5849a1ca906a4ed}
+\-Get the value of all the card except the first \begin{DoxyReturn}{\-Returns}
+int numeric value of all cards except the first (ace will count as 1 ... face cards, 10) 
+\end{DoxyReturn}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/mdaigle/\-Dropbox/\-Business/blackjack/backend/src/game/\-Hand.\-h\item 
+/home/mdaigle/\-Dropbox/\-Business/blackjack/backend/src/game/\-Hand.\-cpp\end{DoxyCompactItemize}

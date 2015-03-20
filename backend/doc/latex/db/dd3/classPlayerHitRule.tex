@@ -1,0 +1,74 @@
+\hypertarget{classPlayerHitRule}{
+\section{\-Player\-Hit\-Rule \-Class \-Reference}
+\label{db/dd3/classPlayerHitRule}\index{\-Player\-Hit\-Rule@{\-Player\-Hit\-Rule}}
+}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPlayerHitRule_a4c03ec3a7f4144cdf13af63a99c427db}{\-Player\-Hit\-Rule} (int hit\-Rule\-Id)
+\item 
+\-Player\-Hit\-Rule\-Action \hyperlink{classPlayerHitRule_a45f0624b07764ff238e594823a109154}{get\-Action} (int player\-Value1, int player\-Value2, \-Card\-Value dealer\-Value, int player\-Card\-Count)
+\item 
+void \hyperlink{classPlayerHitRule_a9b8c2de9fd3aa6869b20a78d4e6f3332}{display\-To\-Log} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classPlayerHitRule_a4c03ec3a7f4144cdf13af63a99c427db}{
+\index{\-Player\-Hit\-Rule@{\-Player\-Hit\-Rule}!\-Player\-Hit\-Rule@{\-Player\-Hit\-Rule}}
+\index{\-Player\-Hit\-Rule@{\-Player\-Hit\-Rule}!PlayerHitRule@{\-Player\-Hit\-Rule}}
+\subsubsection[{\-Player\-Hit\-Rule}]{\setlength{\rightskip}{0pt plus 5cm}\-Player\-Hit\-Rule\-::\-Player\-Hit\-Rule (
+\begin{DoxyParamCaption}
+\item[{int}]{hit\-Rule\-Id}
+\end{DoxyParamCaption}
+)}}
+\label{db/dd3/classPlayerHitRule_a4c03ec3a7f4144cdf13af63a99c427db}
+\-Create a \hyperlink{classPlayerHitRule}{\-Player\-Hit\-Rule} object with a given hit\-Rule\-Id. \-The hit rules will be read from the database and held in memory. 
+\begin{DoxyParams}{\-Parameters}
+{\em hit\-Rule\-Id} & \-An int that references a hit rule in the database. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classPlayerHitRule_a9b8c2de9fd3aa6869b20a78d4e6f3332}{
+\index{\-Player\-Hit\-Rule@{\-Player\-Hit\-Rule}!display\-To\-Log@{display\-To\-Log}}
+\index{display\-To\-Log@{display\-To\-Log}!PlayerHitRule@{\-Player\-Hit\-Rule}}
+\subsubsection[{display\-To\-Log}]{\setlength{\rightskip}{0pt plus 5cm}void \-Player\-Hit\-Rule\-::display\-To\-Log (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{db/dd3/classPlayerHitRule_a9b8c2de9fd3aa6869b20a78d4e6f3332}
+\-Print the player rules to log at info level \hypertarget{classPlayerHitRule_a45f0624b07764ff238e594823a109154}{
+\index{\-Player\-Hit\-Rule@{\-Player\-Hit\-Rule}!get\-Action@{get\-Action}}
+\index{get\-Action@{get\-Action}!PlayerHitRule@{\-Player\-Hit\-Rule}}
+\subsubsection[{get\-Action}]{\setlength{\rightskip}{0pt plus 5cm}\-Player\-Hit\-Rule\-Action \-Player\-Hit\-Rule\-::get\-Action (
+\begin{DoxyParamCaption}
+\item[{int}]{player\-Value1, }
+\item[{int}]{player\-Value2, }
+\item[{\-Card\-Value}]{dealer\-Value, }
+\item[{int}]{player\-Card\-Count}
+\end{DoxyParamCaption}
+)}}
+\label{db/dd3/classPlayerHitRule_a45f0624b07764ff238e594823a109154}
+\-Determine the player hit action given the player's first card value, remaining card values dealer show card value and number of player cards. 
+\begin{DoxyParams}{\-Parameters}
+{\em player\-Value1} & \-The int value representing the player's first card. \-If there is an ace in the hand, it should be in the player\-Value1. \\
+\hline
+{\em player\-Value2} & \-The int value representing the sum of the remaining cards. \\
+\hline
+{\em dealer\-Value} & \-The int value of the dealer's show card. \\
+\hline
+{\em player\-Card\-Count} & \-An int value with the number of cards in the hand. \-Some actions, like split and double only apply to the original two card in the hand. \-The actions must be modified if there are more than three cards. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-The \-Player\-Hit\-Rule\-Action representing the action to take. 
+\end{DoxyReturn}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/mdaigle/\-Dropbox/\-Business/blackjack/backend/src/rule/\-Player\-Hit\-Rule.\-h\item 
+/home/mdaigle/\-Dropbox/\-Business/blackjack/backend/src/rule/\-Player\-Hit\-Rule.\-cpp\end{DoxyCompactItemize}
