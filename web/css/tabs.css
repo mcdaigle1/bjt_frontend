@@ -1,0 +1,31 @@
+.tabs {
+  display:inline-block;
+}
+ 
+.tab {
+  display: inline-block;
+  font-size: 18px;
+  padding: 4px 20px 4px 20px;
+  border-radius: 5px 5px 0px 0px;
+}
+ 
+.tab.active_tab {
+  background-color: #444444;
+}
+
+.tab.inactive_tab {
+  background-color: #303030;
+}
+
+.tab_section {
+  display:none;
+  background-color: #444444;
+  padding: 10px 0px 20px 0px;
+  min-height: 400px;
+  max-width: 1150px;
+  border-radius: 0px 5px 5px 5px;
+}
+ 
+.tab_section.active_section {
+  display:block;
+}

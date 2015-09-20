@@ -12,7 +12,7 @@
 				<include name="css/**" />
 				<include name="js/**" />
 				<include name="data-access/**" />
-				<include name="rule/**" />
+				<include name="util/**" />
 				<include name="config/blackjack.conf" />
 				<include name="config/init.php" />
 			</fileset>

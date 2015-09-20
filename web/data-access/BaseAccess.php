@@ -8,15 +8,31 @@
  * express written permission of an authorized representative of
  * Blue Cask Software..
  ************************************************************************/
-include_once($_SERVER['DOCUMENT_ROOT'] . "/config/init.php");
-include_once($_SERVER['DOCUMENT_ROOT'] . "/../php-common/database/DbConnection.php");
+include_once("config/init.php");
+include_once("database/DbConnection.php");
 
 Class BaseAccess {
 	protected $_dbConnection;
 	protected $_adminUserId = 0;
-	
+ 
 	function __construct() {
-		$this->_dbConnection = DbConnection::instance();
+    $env_type = getenv("ENVIRONMENT_TYPE");
+
+    if (strcmp($env_type, "development") == 0) {
+      include("config/blackjack_conf_dev.php");
+    } else {
+      include("config/blackjack_conf.php");
+    }
+
+		$this->_dbConnection = DbConnection::instance($dbHost, $dbName, $dbUser, $dbPassword);
 	}
+
+  function firstRow($resultArray) {
+    if (sizeof($resultArray) > 0) {
+      return array_values($resultArray)[0];
+    } else {
+      return array();
+    }
+  }
 }
 ?>

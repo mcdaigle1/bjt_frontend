@@ -8,8 +8,8 @@
  * express written permission of an authorized representative of
  * Blue Cask Software..
  ************************************************************************/
-include_once("/var/www/php-common/display/Menu.php");
-include_once("/var/www/php-common/session/Session.php");
+include_once("display/MenuText.php");
+include_once("session/Session.php");
 ?>
 
 
@@ -17,14 +17,7 @@ include_once("/var/www/php-common/session/Session.php");
 <!-- hide from none JavaScript Browsers 
 
 <?php 
-
-	$menu = new Menu();
-
-	$menu->preloadImage("home");
-	$menu->preloadImage("games");
-	$menu->preloadImage("reports");
-	$menu->preloadImage("login");
-	$menu->preloadImage("logout");
+	$menu = new MenuText();
 ?>
 
 // End Hiding -->
@@ -34,17 +27,19 @@ include_once("/var/www/php-common/session/Session.php");
 <div class="menu_bar">
 <?php
 	if (Session::isLoggedIn()) {
-		$menu->menuItem("home", $pageName);
-    	$menu->menuItem("games", $pageName);
-		$menu->menuItem("reports", $pageName);
-		$menu->menuItem("about_us", $pageName);
-		$menu->menuItem("logout", $pageName);
+		$menu->menuItem("HOME", "home", $pageName);
+   	$menu->menuItem("GAMES", "game/game", $pageName);
+   	$menu->menuItem("PLAYER", "player/player", $pageName);
+   	$menu->menuItem("DEALER", "dealer/dealer", $pageName);
+   	$menu->menuItem("BETTING", "betting/betting", $pageName);
+		$menu->menuItem("LOGOUT", "logout", $pageName);
 	} else {
-		$menu->menuItem("home", $pageName, true);
-    	$menu->menuItem("games", $pageName, true);
-		$menu->menuItem("reports", $pageName, true);
-		$menu->menuItem("about_us", $pageName);
-		$menu->menuItem("login", $pageName);
+		$menu->menuItem("HOME", "home", $pageName, true);
+   	$menu->menuItem("GAMES", "game/game", $pageName, true);
+   	$menu->menuItem("PLAYER", "player/player", $pageName, true);
+   	$menu->menuItem("DEALER", "dealer/dealer", $pageName, true);
+   	$menu->menuItem("BETTING", "betting/betting", $pageName, true);
+		$menu->menuItem("LOGIN", "login", $pageName);
 	}
 ?>
 </div>

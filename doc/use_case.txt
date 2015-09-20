@@ -1,0 +1,27 @@
+FRONT END:
+
+User creates rules
+  -- relational DB
+
+BACK END
+
+System Plays game
+  -- Rules in memory
+  -- Shuffle cards 
+    -- separate thread
+    -- deck saved in nosql db?
+  -- Play game
+    -- separate thread
+    -- results in nosql db?
+  -- Process results
+    -- separate thread
+    -- relational DB
+
+
+To play a game:
+  -- create dealer strategy
+  -- create player strategy
+  -- create game
+    -- blackjack payout
+    -- resplits
+    

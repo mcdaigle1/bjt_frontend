@@ -8,12 +8,14 @@
  * express written permission of an authorized representative of
  * Blue Cask Software..
  ************************************************************************/
-include_once($_SERVER['DOCUMENT_ROOT'] . "/config/init.php");
-include_once($_SERVER['DOCUMENT_ROOT'] . "/data-access/BaseAccess.php");
-include_once($_SERVER['DOCUMENT_ROOT'] . "/data-access/AccessException.php");
-include_once($_SERVER['DOCUMENT_ROOT'] . "/data-access/PlayerExistsException.php");
+include_once("config/init.php");
+include_once("data-access/BaseAccess.php");
+include_once("data-access/AccessException.php");
+include_once("data-access/PlayerExistsException.php");
 
 Class PlayerAccess extends BaseAccess {
+  const DEFAULT_PLAYER_ID = 0;
+
 	const STATUS_NEW = 0;
 	const STATUS_INVITED = 1;
 	const STATUS_VERIFIED = 2;
@@ -33,12 +35,16 @@ Class PlayerAccess extends BaseAccess {
 	 * @throws AccessException
 	 */
 	function createPlayer($email, $status, $validationId, $passwordSalt, $encryptedPassword) {
+    if(!is_int($status) || $status < 0 || $status > 3) {
+      throw new Exception("Status: ". $status . " should be an integer betwwen 1 and 3");
+    }
+
 		$sql = 
 			"INSERT INTO player (create_time, mod_time, " .
 			"email, status, validation_id, password_salt, password_md5) " .
 			"values (now(), now(), " .
 			"'" . mysql_real_escape_string($email) . "', " .
-			mysql_real_escape_string($status) . ", " .
+			$status . ", " .
 			"'" . mysql_real_escape_string($validationId) . "', " .
 			"'" . mysql_real_escape_string($passwordSalt) . "', " .
 			"'" . mysql_real_escape_string($encryptedPassword) . "')";
@@ -77,11 +83,8 @@ Class PlayerAccess extends BaseAccess {
 			$message = "Error reading player " . $id;
 			Throw new AccessException($message, $dbe->getCode(), $dbe);
 		}
-		if (array_size($playerArray) > 0) {
-			return $playerArray[1]; 
-		} else {
-			return array();
-		}
+    
+    return $this->firstRow($PlayerArray);
 	}
 	
 	/**
@@ -91,7 +94,8 @@ Class PlayerAccess extends BaseAccess {
 	function readPlayerByEmail($email) {
 		$sql =  "SELECT * FROM player WHERE email = '" . $email . "'";
 		$playerArray = $this->_dbConnection->dbQuery($sql);
-		return $playerArray;
+
+    return $this->firstRow($playerArray);
 	}
 	
 	function updatePlayer($id) {

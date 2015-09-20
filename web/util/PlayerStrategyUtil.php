@@ -1,6 +1,6 @@
 <?php
 /***********************************************************************
- * Copyright 2012 Blue Cask Software. All rights reserved.
+ * Copyright 2015 Blue Cask Software. All rights reserved.
  *
  * THIS PROGRAM IS CONFIDENTIAL AND PROPRIETARY TO BLUE CASK
  * SOFTWARE.  Any unauthorized use, reproduction, modification, or
@@ -8,31 +8,16 @@
  * express written permission of an authorized representative of
  * Blue Cask Software..
  ************************************************************************/
+include_once("util/StrategyUtil.php");
 
 /**
  * 
- * Player Hit Rule utilities
+ * Player Strategy utilities
  * @author mdaigle
  *
  */
-Class PlayerHitRule {
+Class PlayerStrategyUtil extends StrategyUtil {
 	
-	/**
-	 * Get the array of hit rule abbreviations
-	 * @return array of hit rule abbreviations
-	 */
-	static function getHitRuleAbbrevArray() { 
-        return array("SR", "HT", "ST", "DH", "SP", "DS");
-	}
-
-	/**
-	 * Get the array of dealer hand abbreviations
-	 * @return array of dealer hand abbreviations
-	 */
-	static function getDealerHandAbbrevArray() { 
-		return array("A", "2", "3", "4", "5", "6", "7", "8", "9", "10");
-	}    	
-		
 	/**
 	 * Get the array of player hand abbreviations
 	 * @return array of player hand abbreviations
@@ -44,26 +29,6 @@ Class PlayerHitRule {
 		"9,9", "10,10");
 	}
 	
-	/**
-	 * Get the hit rule abbreviation by index
-	 * @param int index of hit rule abbreviation
-	 * @return string holding hit rule abbreviation
-	 */
-	static function getHitRuleAbbrev($i) { 
-        $hraArray = self::getHitRuleAbbrevArray();
-        return $hraArray[$i];
-	}
-
-	/**
-	 * Get the dealer hand abbreviation by index
-	 * @param int index of dealer hand abbreviation
-	 * @return string holding dealer hand abbreviation
-	 */
-	static function getDealerHandAbbrev($i) { 
-		$dhaArray = self::getDealerHandAbbrevArray();
-        return $dhaArray[$i];
-	}    	
-
 	/**
 	 * Get the player hand abbreviation by index
 	 * @param int index of player hand abbreviation

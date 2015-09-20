@@ -9,9 +9,9 @@
  * Blue Cask Software..
  ************************************************************************/
 $pageName="submit";
-include("/var/www/php-common/database/DbConnection.php");
-include("./header.php"); 
-include("./menu.php");
+include("database/DbConnection.php");
+include("pages/header.php"); 
+include("pages/menu.php");
 
 $DOWNLOAD_SIZE_MB = 5;
 ?>

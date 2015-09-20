@@ -6,12 +6,12 @@ body {
 	background-color: #000000;
 }
 
-input {
-	margin: 0px 0px 10px 0px; 
-}
-
 a:link {
 	color: white;
+}
+
+a:hover {
+  color: #AAAAAA;
 }
 
 a:visited {
@@ -25,8 +25,12 @@ a:visited {
 	background-color: #000000;
 }
 
+.page_content {
+  margin: 30px 0px 0px 50px;
+}
+
 .main_logo {
-	margin: 20px 0px 0px 5px; 
+	margin: 20px 0px 0px 30px; 
 }
 
 .menu_separator {
@@ -34,12 +38,39 @@ a:visited {
 }
 
 .menu_bar {
-	text-align: right;
-	margin: 0px 50px 0px 0px;
+	margin: 0px 50px 0px 400px;
 }
 
 .menu_item {
 	margin: 0px 10px 0px 30px;
+  font-size: 20px;
+}
+
+a:link.menu_item {
+  text-decoration: none;
+}
+
+a:visited.menu_item {
+  text-decoration: none;
+}
+ 
+a:hover.menu_item {
+  color: #AAAAAA;
+}
+
+.menu_item_disabled {
+	margin: 0px 10px 0px 30px;
+  font-size: 22px;
+}
+
+a:link.menu_item_disabled {
+  color: #444444;
+  text-decoration: none;
+}
+
+a:visited.menu_item_disabled {
+  color: #444444;
+  text-decoration: none;
 }
 
 .error_message {
@@ -69,4 +100,72 @@ a:visited {
 	font-size: 12pt; 
 	margin: 5px 0px 0px 100px;
 	color: white;	
+}
+
+/* common page formatting */
+.one_col_row {
+  margin: 0px 0px 0px 0px;
+}
+
+.one_col_section {
+  margin: 20px 0px 0px 20px;
+}
+
+.one_col_label {
+  display: inline-block; 
+  width: 250px;
+  font-size: 14pt;
+  text-align: right;
+  margin: 0px 0px 10px 0px;
+}
+
+.one_col_value {
+  display: inline-block; 
+  font-size: 14pt;
+  text-align: left;
+  margin: 0px 0px 10px 10px;
+}
+
+.one_col_selector {
+  display: inline-block; 
+  text-align: left;
+  margin: 0px 0px 10px 10px;
+}
+
+.one_col_input {
+  display: inline-block; 
+  text-align: left;
+  margin: 0px 0px 10px 10px;
+}
+
+.two_col_row {
+  margin: 0px 0px 0px 0px;
+}
+
+.two_col_left_label {
+  display: inline-block; 
+  width: 250px;
+  font-size: 14pt;
+  margin: 0px 0px 0px 0px;
+}
+
+/* inputs */
+.very_short_input {
+  width: 20px;
+}
+
+.short_input {
+  width: 50px;
+}
+
+.medium_input {
+  width: 100px;
+}
+
+.long_input {
+  width: 200px;
+}
+
+.very_long_input {
+  width: 350px;
 }

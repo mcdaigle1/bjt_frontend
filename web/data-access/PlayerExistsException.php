@@ -8,7 +8,7 @@
  * express written permission of an authorized representative of
  * Blue Cask Software..
  ************************************************************************/
-include_once($_SERVER['DOCUMENT_ROOT'] . "/../php-common/exceptions/BaseException.php");
+include_once("exceptions/BaseException.php");
 
 class PlayerExistsException extends BaseException {
 	public function errorMessage() {

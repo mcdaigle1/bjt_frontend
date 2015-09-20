@@ -1,27 +1,33 @@
 .login_title {
-	margin: 20px 0px 10px 220px;
-	color: #660033;
+	margin: 50px 0px 10px 220px;
 	font-size: 24px;
 	font-weight: bold;
 }
 
 .create_account_title {
 	margin: 40px 0px 10px 220px;
-	color: #660033;
 	font-size: 24px;
 	font-weight: bold;
 }
 
-.login_text {
-	float: left;
+.login_label_left {
+  display: inline-block;
 	margin: 10px 0px 0px 100px;
 	width: 120px;
-	color: white;	
+	/*color: white;	*/
+}
+
+.login_input {
+  display: inline-block;
+}
+
+.login_password_input {
+  display: inline-block;
 }
 
 .username_text {
 	margin: 10px 0px 0px 100px;
-	color: white;	
+	/*color: white;	*/
 }
 
 .login_text_input {	
@@ -29,7 +35,7 @@
 }
 
 .login_submit_button {
-	margin: 10px 0px 0px 220px;	
+	margin: 10px 0px 0px 225px;	
 }
 
 

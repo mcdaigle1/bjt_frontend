@@ -1,0 +1,145 @@
+/* STRATEGY SECTION */
+
+.strategy_section {
+  display: inline-block;
+}
+
+.strategy_table_section {
+  display: inline-block;
+  float: left;
+}
+
+.strategy_table {
+	margin: 10px 0px 0px 30px;
+	font-family: lucida-sans, sans-serif; 
+	font-size: 12pt; 
+	color: white;
+	border-collapse: collapse;
+}
+
+.strategy_table_label_top {
+	font-size: 12pt; 
+	margin: 15px 0px 0px 375px;
+}
+
+.strategy_table_label_cell_top {
+	width: 30px;
+	padding: 7px 0px 5px 20px;
+}
+
+.strategy_table_label_cell_left {
+	width: 20px;
+  text-align: right;
+	padding: 0px 10px 0px 5px;
+}
+
+.strategy_table_cell_select {
+	border: 1px solid white;
+	padding: 3px 5px 3px 5px;
+}
+
+.strategy_table_cell_display {
+	border: 1px solid white;
+	padding: 3px 5px 3px 5px;
+}
+
+.strategy_display {
+  font: 11px 'Lucida Grande';
+  color: black;
+  padding: 1px 10px 1px 15px;
+  border-radius: 5px;
+  border: 1px solid rgb(166, 166, 166);
+  width: 21px;
+  height: 14px;
+}
+
+.edit_hit_strategy_link {
+	margin: 20px 0px 0px 110px;	
+}
+
+.hit_strategy_title {
+	margin: 20px 0px 0px 280px;
+	color: #660033;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.strategy_name_input_label {
+  display: inline-block;
+  width: 180px;
+  text-align: right;
+  margin: 20px 5px 7px 0px;
+  font-size: 14px;
+}
+
+.strategy_name_input_field {	
+  display: inline-block;
+}
+
+.strategy_name_input {
+	width: 500px;
+}
+
+.strategy_description_input_label {
+  display: inline-block;
+	color: white;	
+  width: 180px;
+  text-align: right;
+  margin: 20px 5px 0px 0px;
+  font-size: 14px;
+}
+
+.strategy_description_input_field {	
+  display: inline-block;
+}
+
+.strategy_description_input {
+  width: 500px;
+  height: 75px;
+}
+
+.create_strategy_button {
+  width: 100px;
+  margin: 5px 0px 20px 190px;
+}
+
+.strategy_SR {
+  background-color: #D7CBB5;
+}
+
+.strategy_HT {
+  background-color: #898421;
+}
+
+.strategy_ST {
+  background-color: #CC3333;
+}
+
+.strategy_DH {
+  background-color: #999999;
+}
+
+.strategy_SP {
+  background-color: #4878A8;
+}
+
+.strategy_DS {
+  background-color: #D8C358;
+}
+
+/* LEGEND SECTION */
+
+.legend_section {
+  display: inline-block;
+  margin: 80px 0px 0px 20px;
+}
+
+.legend_header {
+  font-size: 16px;
+  padding: 0px 0px 5px 0px;
+}
+
+.legend_value_cell {
+  color: white;
+  padding: 0px 0px 0px 5px;
+}

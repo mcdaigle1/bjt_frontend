@@ -8,16 +8,20 @@
  * express written permission of an authorized representative of
  * Blue Cask Software..
  ************************************************************************/
-include_once($_SERVER['DOCUMENT_ROOT'] . "/config/init.php");
+include_once("config/init.php");
 
 ?>
 
 <div class="main_logo">
 	<a href="/pages/home.php"><img src="/images/bjt_header.jpg"></a>
 <?php
-   	session_start();
+  if (!Session::isLoggedIn()) {
+    if (session_status() == PHP_SESSION_NONE) {
+      session_start();
+    }
+  }
 
-	include($_SERVER['DOCUMENT_ROOT'] . "/pages/menu.php");
-	include($_SERVER['DOCUMENT_ROOT'] . "/pages/message_banner.php");
+	include("pages/menu.php");
+	include("pages/message_banner.php");
 ?>
 </div>

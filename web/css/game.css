@@ -1,0 +1,77 @@
+.game_create_section {
+  display: none;
+}
+
+.game_section {
+  display: none;
+  margin: 5px 0px 0px 10px;
+}
+
+.game_select_label_left {
+  display: inline-block;
+  margin: 20px 0px 0px 50px;
+  font-size: 14px;
+}
+
+.game_select_input_section {
+  display: inline-block;
+  margin: 20px 0px 0px 140px;
+}
+
+.game_select_button_section {
+  display: inline-block;
+  margin: 0px 0px 0px 10px;
+}
+
+.game_section_label_left {
+  display: inline-block;
+  font-size: 18px;
+  margin: 10px 0px 0px 0px;
+}
+
+.game_section_label_right {
+  display: inline-block;
+  font-size: 18px;
+}
+
+.game_subsection {
+  border: 0px solid white;
+  margin: 10px 0px 0px 30px;
+}
+
+.game_section_hidden {
+  display: none
+}
+
+.game_subsection_label {
+  margin: 10px 0px 0px 30px;
+  font-size: 16px;
+}
+
+.system_games_label {
+  display: inline;
+}
+
+.player_strategy_select_section {
+  margin: 10px 0px 10px 10px;
+}
+
+.player_strategy_select_dropdown_section {
+  display: inline-block;
+}
+
+.player_strategy_select_button_section {
+  display: inline-block;
+  margin: 0px 0px 0px 10px;
+}
+
+.player_strategy_create_link_section {
+  display: inline-block;
+  margin: 0px 0px 0px 10px;
+}
+
+.player_strategy_select_link_section {
+  margin: 0px 0px 0px 175px;
+}
+
+

@@ -8,15 +8,15 @@
  * express written permission of an authorized representative of
  * Blue Cask Software..
  ************************************************************************/
-include_once($_SERVER['DOCUMENT_ROOT'] . "/../php-common/logging/Logging.php");
-include_once($_SERVER['DOCUMENT_ROOT'] . "/../php-common/session/Session.php");
-include_once($_SERVER['DOCUMENT_ROOT'] . "/../php-common/security/Encryption.php");
-include_once($_SERVER['DOCUMENT_ROOT'] . "/../php-common/utilities/StringUtil.php");
-include_once($_SERVER['DOCUMENT_ROOT'] . "/../php-common/utilities/ArrayUtil.php");
-include_once($_SERVER['DOCUMENT_ROOT'] . "/../php-common/email/Email.php");
-include_once($_SERVER['DOCUMENT_ROOT'] . "/../php-common/display/MessageBanner.php");
-include_once($_SERVER['DOCUMENT_ROOT'] . "/../php-common/exceptions/DuplicateEntryException.php");
-include_once($_SERVER['DOCUMENT_ROOT'] . "/../php-common/exceptions/MailException.php");
+include_once("logging/Logging.php");
+include_once("session/Session.php");
+include_once("security/Encryption.php");
+include_once("utilities/StringUtil.php");
+include_once("utilities/ArrayUtil.php");
+include_once("email/Email.php");
+include_once("display/MessageBanner.php");
+include_once("exceptions/DuplicateEntryException.php");
+include_once("exceptions/MailException.php");
 
 $productName = "BlackJackTrack";
 $fromEmailAddress = "webmaster@blackjacktrack.com";

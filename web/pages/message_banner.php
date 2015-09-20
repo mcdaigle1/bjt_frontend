@@ -8,7 +8,7 @@
  * express written permission of an authorized representative of
  * Blue Cask Software..
  ************************************************************************/
-include_once($_SERVER['DOCUMENT_ROOT'] . "/../php-common/display/MessageBanner.php");
+include_once("display/MessageBanner.php");
 
 $errorArray = MessageBanner::getErrorList();
 $warningArray = MessageBanner::getWarningList();

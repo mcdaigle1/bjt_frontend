@@ -9,7 +9,7 @@ $pageName="logout";
  * express written permission of an authorized representative of
  * Blue Cask Software..
  ************************************************************************/
-
+include_once("config/init.php");
 ?>
 
 <html>
@@ -22,9 +22,10 @@ $pageName="logout";
   <body>
 
   <div class="main_content">
-    <?php
-        Session::logOut();
-        header("Location: /pages/home.php");
+  <?php
+    l_err("logging out");
+    Session::logOut();
+    header("Location: /pages/home.php");
 	?>
   </div>
 

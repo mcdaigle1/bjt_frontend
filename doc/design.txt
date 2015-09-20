@@ -10,8 +10,8 @@ HIT RULES
  
  Each of those rows holds a vector that represents dealer up cards:
  
- Vector Index: 0  1  2  3  4  5   6   7   8   9   10
- Dealer Hand:  A  1  2  3  4  5   6   7   8   9   10/Face
+ Vector Index: 0  1  2  3  4  5  6  7  8  9    10    11    12  
+ Dealer Hand:  A  2  3  4  5  6  7  8  9  10   Jack  Queen King
  
  Each cell holds an int that represents the hit action as defined in the
  PlayerHitRuleAction enum.
