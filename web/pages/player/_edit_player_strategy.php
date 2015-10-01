@@ -71,6 +71,17 @@ $StrategyAbbrevs = PlayerStrategyUtil::getStrategyAbbrevArray();
       <td class='strategy_table_label_cell_top'><?php DealerStrategyUtil::getDealerHandAbbrev($i); ?></td>
 <?php } ?>
     </table>
+    <div class='create_strategy_name_input_section'>
+      <div class='strategy_name_input_label'>Strategy Name</div>
+      <div class='strategy_name_input_field'><input class='strategy_name_input' type='text' id='ps_name_input'></div>
+    </div>
+    <div class='create_strategy_description_input_section'>
+      <div class='strategy_description_input_label'>Strategy Description </div>
+      <div class='strategy_description_input_field'><textarea class='strategy_description_input' id='ps_description_input'></textarea></div>
+    </div>
+    <div class='edit_strategy_button'>
+      <input type='submit' value='Save Strategy' id='player_strategy_edit_button'>
+    </div>
   </div>
   <div class = 'legend_section'> 
 <?php include("pages/player/_strategy_legend.php"); ?>

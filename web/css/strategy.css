@@ -1,7 +1,11 @@
-/* STRATEGY SECTION */
+/* GENERAL STRATEGY SECTION */
 
 .strategy_section {
   display: inline-block;
+}
+
+.strategy_selector_hr {
+  margin: 0px 35px 0px 35px;
 }
 
 .strategy_table_section {
@@ -9,17 +13,29 @@
   float: left;
 }
 
-.strategy_table {
-	margin: 10px 0px 0px 30px;
+.player_strategy_table {
+	margin: 0px 0px 0px 30px;
 	font-family: lucida-sans, sans-serif; 
 	font-size: 12pt; 
 	color: white;
 	border-collapse: collapse;
 }
 
+.dealer_strategy_table {
+  margin: 20px 0px 0px 250px;
+  font-family: lucida-sans, sans-serif;
+  font-size: 12pt;
+  color: white;
+  border-collapse: collapse;
+}
+
+.strategy_table_left_spacing {
+  width: 100px;
+}
+
 .strategy_table_label_top {
-	font-size: 12pt; 
-	margin: 15px 0px 0px 375px;
+	font-size: 16px; 
+	margin: 25px 0px 0px 375px;
 }
 
 .strategy_table_label_cell_top {
@@ -41,6 +57,8 @@
 .strategy_table_cell_display {
 	border: 1px solid white;
 	padding: 3px 5px 3px 5px;
+  width: 48px;
+  height: 25px;
 }
 
 .strategy_display {
@@ -98,9 +116,23 @@
   height: 75px;
 }
 
-.create_strategy_button {
+.strategy_edit_button_section {
+  display: none;
+  margin: 0px 0px 0px 150px;
+}
+
+.strategy_create_section {
+  display: none;
+}
+
+.strategy_create_button {
+  display: inline-block;
   width: 100px;
   margin: 5px 0px 20px 190px;
+}
+
+.strategy_create_cancel {
+  display: inline-block;
 }
 
 .strategy_SR {
@@ -125,6 +157,43 @@
 
 .strategy_DS {
   background-color: #D8C358;
+}
+
+.strategy_selector_section {
+  margin: 12px 0px 12px 40px;
+}
+
+.strategy_selector {
+  display: inline-block;
+}
+
+.strategy_selector_dropdown {
+  width: 200px
+}
+
+.strategy_selector_label {
+  display: inline-block;
+}
+
+.strategy_selector_button_section {
+  display: inline-block;
+  margin: 0px 0px 0px 5px;
+}
+
+.strategy_selector_label {
+  font-size: 16px;
+  display: inline-block;
+  margin: 0px 8px 0px 0px;
+  float: left;
+}
+
+.strategy_checkbox_section {
+  display: inline-block;
+  margin: 0px 0px 0px 15px;
+}
+
+.strategy_checkbox_label {
+  display: inline-block;
 }
 
 /* LEGEND SECTION */

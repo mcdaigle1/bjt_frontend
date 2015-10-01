@@ -60,7 +60,7 @@ a:hover.menu_item {
 
 .menu_item_disabled {
 	margin: 0px 10px 0px 30px;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 a:link.menu_item_disabled {
@@ -168,4 +168,8 @@ a:visited.menu_item_disabled {
 
 .very_long_input {
   width: 350px;
+}
+ 
+.hidden_field {
+  display: none;
 }

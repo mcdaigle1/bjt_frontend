@@ -11,30 +11,29 @@
 
 /**
  * 
- * Strategy utilities
+ * Player Strategy utilities
  * @author mdaigle
  *
  */
 Class StrategyUtil {
 	
-	/**
-	 * Get the array of strategy abbreviations
-	 * @return array of strategy abbreviations
-	 */
-	static function getStrategyAbbrevArray() { 
-    return array("SR", "HT", "ST", "DH", "SP", "DS");
-	}
+  /**
+   * Get the array of first card abbreviations
+   * @return array of first card abbreviations
+   */
+  static function getFirstCardAbbrevArray() {
+    return array("A", "2", "3", "4", "5", "6", "7", "8", "9", "10");
+  }
 
-	/**
-	 * Get the strategy abbreviation by index
-	 * @param int index of strategy abbreviation
-	 * @return string holding strategy abbreviation
-	 */
-	static function getStrategyAbbrev($i) { 
-    $aArray = self::getStrategyAbbrevArray();
-    return $aArray[$i];
-	}
-
+  /**
+   * Get the first card abbreviation by index
+   * @param int index of first card abbreviation
+   * @return string holding first card abbreviation
+   */
+  static function getFirstCardAbbrev($i) {
+    $dhaArray = self::getDealerHandAbbrevArray();
+        return $dhaArray[$i];
+  }
 }
 
 ?>

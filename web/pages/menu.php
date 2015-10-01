@@ -28,16 +28,14 @@ include_once("session/Session.php");
 <?php
 	if (Session::isLoggedIn()) {
 		$menu->menuItem("HOME", "home", $pageName);
-   	$menu->menuItem("GAMES", "game/game", $pageName);
-   	$menu->menuItem("PLAYER", "player/player", $pageName);
-   	$menu->menuItem("DEALER", "dealer/dealer", $pageName);
+   	$menu->menuItem("GAME", "game/game", $pageName);
+   	$menu->menuItem("STRATEGY", "strategy/strategy", $pageName);
    	$menu->menuItem("BETTING", "betting/betting", $pageName);
 		$menu->menuItem("LOGOUT", "logout", $pageName);
 	} else {
 		$menu->menuItem("HOME", "home", $pageName, true);
-   	$menu->menuItem("GAMES", "game/game", $pageName, true);
-   	$menu->menuItem("PLAYER", "player/player", $pageName, true);
-   	$menu->menuItem("DEALER", "dealer/dealer", $pageName, true);
+   	$menu->menuItem("GAME", "game/game", $pageName, true);
+   	$menu->menuItem("STRATEGY", "strategy/strategy", $pageName, true);
    	$menu->menuItem("BETTING", "betting/betting", $pageName, true);
 		$menu->menuItem("LOGIN", "login", $pageName);
 	}

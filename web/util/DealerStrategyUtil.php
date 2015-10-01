@@ -18,24 +18,33 @@ include_once("util/StrategyUtil.php");
  */
 Class DealerStrategyUtil extends StrategyUtil {
 	
-	/**
-	 * Get the array of dealer hand abbreviations
-	 * @return array of dealer hand abbreviations
-	 */
-	static function getDealerHandAbbrevArray() { 
-		return array("A", "2", "3", "4", "5", "6", "7", "8", "9", "10");
-	}    	
-		
-	/**
-	 * Get the dealer hand abbreviation by index
-	 * @param int index of dealer hand abbreviation
-	 * @return string holding dealer hand abbreviation
-	 */
-	static function getDealerHandAbbrev($i) { 
-		$dhaArray = self::getDealerHandAbbrevArray();
-        return $dhaArray[$i];
-	}    	
+  /**
+   * Get the array of strategy abbreviations
+   * @return array of strategy abbreviations
+   */
+  static function getDealerStrategyAbbrevArray() {
+    return array("HT", "ST");
+  }
 
+  /**
+   * Get the array of hand abbreviations
+   * @return array of hand abbreviations
+   */
+  static function getHandAbbrevArray() {
+    return array("5", "6", "7", "8", "9", "10", "11", "12", "13", "14",
+    "15", "16", "17", "18", "19", "20", "A,A", "A,2", "A,3", "A,4", "A,5", "A,6", "A,7",
+    "A,8", "A,9");
+  }
+
+  /**
+   * Get the hand abbreviation by index
+   * @param int index of hand abbreviation
+   * @return string holding hand abbreviation
+   */
+  static function getHandAbbrev($i) {
+    $phaArray = self::getHandAbbrevArray();
+        return $phaArray[$i];
+  }
 }
 
 ?>

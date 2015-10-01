@@ -10,18 +10,18 @@
  ************************************************************************/
 include_once("config/init.php");
 include_once("data-access/PlayerAccess.php");
-include_once("data-access/PlayerStrategyAccess.php");
+include_once("data-access/DealerStrategyAccess.php");
 
-if (array_key_exists('createPlayerStrategySet', $_POST)) { 
+if (array_key_exists('createDealerStrategySet', $_POST)) { 
   try {
     if (!array_key_exists('strategySet', $_POST)) {
-      throw new Exception("strategySet must be provided when creating player strategyset");
+      throw new Exception("strategySet must be provided when creating dealer strategyset");
     }
     if (!array_key_exists('strategySetName', $_POST)) {
-      throw new Exception("strategySetName must be provided when creating player strategyset");
+      throw new Exception("strategySetName must be provided when creating dealer strategyset");
     }
     if (!array_key_exists('strategySetDescription', $_POST)) {
-      throw new Exception("strategySetDescription must be provided when creating player strategyset");
+      throw new Exception("strategySetDescription must be provided when creating dealer strategyset");
     }
     
     if (Session::isLoggedIn()) {
@@ -29,56 +29,56 @@ if (array_key_exists('createPlayerStrategySet', $_POST)) {
       $player = $playerAccess->readPlayerByEmail($_SESSION['user_email']);
     }
     
-    $playerStrategyAccess = new PlayerStrategyAccess();
-    $playerStrategyId = $playerStrategyAccess->createPlayerStrategy($_POST["strategySetName"], $_POST["strategySetDescription"], $player["id"], $_POST["strategySet"]);
+    $dealerStrategyAccess = new DealerStrategyAccess();
+    $dealerStrategyId = $dealerStrategyAccess->createDealerStrategy($_POST["strategySetName"], $_POST["strategySetDescription"], $player["id"], $_POST["strategySet"]);
 
-    $result = array("result" => "success", "message" => "Player strategyset created");
+    $result = array("result" => "success", "message" => "Dealer strategyset created");
 
     echo(json_encode($result));
   } catch (Exception $e) {
     $result = array("result" => "error", "message" => $e->getMessage());
     echo(json_encode($result));
   }
-} elseif (array_key_exists('getPlayerStrategyNames', $_POST)) { 
+} elseif (array_key_exists('getDealerStrategyNames', $_POST)) { 
   try {
     if (Session::isLoggedIn()) {
       $playerAccess = new PlayerAccess();
       $player = $playerAccess->readPlayerByEmail($_SESSION['user_email']);
     }
 
-    $playerStrategyAccess = new PlayerStrategyAccess();
-    $playerStrategyNames = $playerStrategyAccess->readPlayerStrategyNames($player["id"]);
+    $dealerStrategyAccess = new DealerStrategyAccess();
+    $dealerStrategyNames = $dealerStrategyAccess->readDealerStrategyNames($player["id"]);
     
-    $result = array("result" => "success", "message" => "Player strategy names retrieved", "playerStrategyNames" => $playerStrategyNames);
+    $result = array("result" => "success", "message" => "Dealer strategy names retrieved", "dealerStrategyNames" => $dealerStrategyNames);
     echo(json_encode($result));
   } catch (Exception $e) {
     $result = array("result" => "error", "message" => $e->getMessage());
     echo(json_encode($result));
   }
-} elseif (array_key_exists('getPlayerStrategyInfo', $_POST)) { 
+} elseif (array_key_exists('getDealerStrategyInfo', $_POST)) { 
   try {
     if (Session::isLoggedIn()) {
       $playerAccess = new PlayerAccess();
       $player = $playerAccess->readPlayerByEmail($_SESSION['user_email']);
     }
 
-    $playerStrategyAccess = new PlayerStrategyAccess();
-    $playerStrategyInfo = $playerStrategyAccess->readPlayerStrategyInfo($player["id"]);
-    $systemStrategyInfo = $playerStrategyAccess->readPlayerStrategyInfo(PlayerAccess::DEFAULT_PLAYER_ID);
+    $dealerStrategyAccess = new DealerStrategyAccess();
+    $dealerStrategyInfo = $dealerStrategyAccess->readDealerStrategyInfo($player["id"]);
+    $systemStrategyInfo = $dealerStrategyAccess->readDealerStrategyInfo(PlayerAccess::DEFAULT_PLAYER_ID);
     
     $result = array("result" => "success", 
-                    "message" => "Player strategy info retreived", 
-                    "playerStrategyInfo" => $playerStrategyInfo,
+                    "message" => "Dealer strategy info retreived", 
+                    "dealerStrategyInfo" => $dealerStrategyInfo,
                     "systemStrategyInfo" => $systemStrategyInfo);
     echo(json_encode($result));
   } catch (Exception $e) {
     $result = array("result" => "error", "message" => $e->getMessage());
     echo(json_encode($result));
   }
-} elseif (array_key_exists('getPlayerStrategySet', $_POST)) {
+} elseif (array_key_exists('getDealerStrategySet', $_POST)) {
   try {
     if (!array_key_exists('strategyId', $_POST)) {
-      throw new Exception("strategyId must be provided when getting player strategyset");
+      throw new Exception("strategyId must be provided when getting dealer strategyset");
     }
 
     if (Session::isLoggedIn()) {
@@ -86,12 +86,12 @@ if (array_key_exists('createPlayerStrategySet', $_POST)) {
       $player = $playerAccess->readPlayerByEmail($_SESSION['user_email']);
     }
 
-    $playerStrategyAccess = new PlayerStrategyAccess();
-    $playerStrategySet = $playerStrategyAccess->readPlayerStrategy($_POST['strategyId']);
+    $dealerStrategyAccess = new DealerStrategyAccess();
+    $dealerStrategySet = $dealerStrategyAccess->readDealerStrategy($_POST['strategyId']);
 
     $result = array("result" => "success",
-                    "message" => "Player strategy set retreived",
-                    "playerStrategySet" => $playerStrategySet);
+                    "message" => "Dealer strategy set retreived",
+                    "dealerStrategySet" => $dealerStrategySet);
     echo(json_encode($result));
   } catch (Exception $e) {
     $result = array("result" => "error", "message" => $e->getMessage());

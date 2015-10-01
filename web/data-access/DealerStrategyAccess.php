@@ -58,6 +58,19 @@ Class DealerStrategyAccess extends BaseAccess {
 
     return $this->firstRow($strategyArray);
   }
+
+  /**
+   * Find the names of all strategys for given user id
+   * @param int $userId - the id we want to search for
+   * @throws AccessException
+   * @return array of strategy names
+   */
+  function readDealerStrategyInfo($userId) {
+    $sql = "SELECT id, name, description  FROM dealer_strategy WHERE player_id = " .  $userId;
+
+    $strategyInfoArray = $this->_dbConnection->dbQuery($sql);
+    return $strategyInfoArray;
+  }
   
   function updateDealerStrategy($id) {
 
