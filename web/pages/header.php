@@ -13,6 +13,7 @@ include_once("config/init.php");
 ?>
 
 <div class="main_logo">
+  <div class="message_box" id="message_box">hello</div>
 	<a href="/pages/home.php"><img src="/images/bjt_header.jpg"></a>
 <?php
   if (!Session::isLoggedIn()) {

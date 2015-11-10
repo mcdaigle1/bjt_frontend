@@ -173,3 +173,14 @@ a:visited.menu_item_disabled {
 .hidden_field {
   display: none;
 }
+
+.message_box {
+  visibility: hidden;
+  position: relative;
+  width: 600px;
+  left: 403px;
+  top: 30px;
+  padding: 2px 2px 2px 10px;
+  border: 2px solid white;
+  color: #FF7070;
+}

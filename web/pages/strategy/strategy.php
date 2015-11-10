@@ -47,7 +47,7 @@ if (!Session::isLoggedIn()) {
       </div>
       
       <div class="tab_section" id="section_dealer_strategy">
-<?php # include("pages/game/_create_game.php"); ?>
+<?php include("pages/strategy/_dealer_strategy.php"); ?>
       </div>
 
     </div>

@@ -11,10 +11,7 @@
 include_once("util/StrategyUtil.php");
 
 /**
- * 
  * Dealer Strategy utilities
- * @author mdaigle
- *
  */
 Class DealerStrategyUtil extends StrategyUtil {
 	

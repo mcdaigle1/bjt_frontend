@@ -8,10 +8,8 @@
  * express written permission of an authorized representative of
  * Blue Cask Software..
  ************************************************************************/
-include_once("data-access/PlayerStrategyAccess.php");
 include_once("util/DealerStrategyUtil.php");
 include_once("util/PlayerStrategyUtil.php");
-include_once("utilities/ArrayUtil.php");
 
 // get the desired player strategy
 $playerHandAbbrevs = PlayerStrategyUtil::getHandAbbrevArray();
@@ -83,5 +81,8 @@ $dealerFirstCardAbbrevs = DealerStrategyUtil::getFirstCardAbbrevArray();
   </div>
   <div class='strategy_create_button'>
     <input type='submit' value='Save Strategy' id='player_strategy_create_button'>
+  </div>
+  <div class='strategy_create_cancel'>
+    <a id='player_strategy_create_cancel'>cancel</a>
   </div>
 </div>

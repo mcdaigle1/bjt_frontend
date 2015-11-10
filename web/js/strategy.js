@@ -152,6 +152,11 @@ $(document).ready(function() {
     show_player_strategy_view();
     $("#player_strategy_create_section").css('display', 'none');
   });
+
+  $("#dealer_strategy_create_cancel").click(function() {
+    show_dealer_strategy_view();
+    $("#dealer_strategy_create_section").css('display', 'none');
+  });
 });
 
 // load the player select dropdown with default and player strategies
@@ -228,20 +233,26 @@ function show_dealer_strategy_view() {
 function activate_tab() {
   var tab_index = $("#tab_index").text();
   switch(tab_index) {
-    case "1":
-      var oldClass = $("#tab_player_strategy").attr('class');
-      $("#tab_player_strategy").removeClass(oldClass).addClass("tab").addClass("active_tab");
-      $("#section_player_strategy").removeClass(oldClass).addClass("tab_section").addClass("active_section");
+    case '1':
+      // var oldClass = $("#tab_player_strategy").attr('class');
+      $("#tab_dealer_strategy").removeClass("active_tab").addClass("inactive_tab");
+      $("#tab_player_strategy").removeClass("inactive_tab").addClass("active_tab");
+      $("#section_dealer_strategy").removeClass("active_section");
+      $("#section_player_strategy").addClass("active_section");
       break;
-    case "2":
-      var oldClass = $("#tab_dealer_strategy").attr('class');
-      $("#tab_dealer_strategy").removeClass(oldClass).addClass("tab").addClass("active_tab");
-      $("#section_dealer_strategy").removeClass(oldClass).addClass("tab_section").addClass("active_section");
+    case '2':
+      // var oldClass = $("#tab_dealer_strategy").attr('class');
+      $("#tab_player_strategy").removeClass("active_tab").addClass('inactive_tab');
+      $("#tab_dealer_strategy").removeClass("inactive_tab").addClass("active_tab");
+      $("#section_player_strategy").removeClass("active_section");
+      $("#section_dealer_strategy").addClass("active_section");
       break;
     default:
-      var oldClass = $("#tab_player_strategy").attr('class');
-      $("#tab_player_strategy").removeClass(oldClass).addClass("tab").addClass("active_tab");
-      $("#section_player_strategy").removeClass(oldClass).addClass("tab_section").addClass("active_section");
+      // var oldClass = $("#tab_player_strategy").attr('class');
+      $("#tab_dealer_strategy").removeClass("active_tab").addClass("inactive_tab");
+      $("#tab_player_strategy").removeClass("inactive_tab").addClass("active_tab");
+      $("#section_dealer_strategy").removeClass("active_section");
+      $("#section_player_strategy").addClass("active_section");
       break;
   }
 }

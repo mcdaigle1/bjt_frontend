@@ -11,10 +11,7 @@
 include_once("util/StrategyUtil.php");
 
 /**
- * 
  * Player Strategy utilities
- * @author mdaigle
- *
  */
 Class PlayerStrategyUtil extends StrategyUtil {
 	

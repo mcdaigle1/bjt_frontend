@@ -23,10 +23,8 @@ if (!Session::isLoggedIn()) {
 		<link rel="SHORTCUT ICON" HREF="images/favicon.ico">
 		<link href="/css/main.css" rel="stylesheet" type="text/css">    
 		<link href="/css/betting.css" rel="stylesheet" type="text/css">    
-		<link href="/css/strategy.css" rel="stylesheet" type="text/css">    
 		<link href="/css/tabs.css" rel="stylesheet" type="text/css">    
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="/js/strategy.js"></script>
     <script src="/js/betting.js"></script>
     <script src="/js/tabs.js"></script>
 		<title>BlackJackTrack</title>
@@ -37,17 +35,12 @@ if (!Session::isLoggedIn()) {
 <?php include("pages/header.php"); ?>
     <div class="page_content">
       <div class="tabs">
-        <div class="tab active_tab" id="tab_create_betting_strategy">Create Betting Strategy</div>
-        <div class="tab inactive_tab" id="tab_edit_betting_strategy">Edit Betting Strategy</div>
+        <div class="tab active_tab" id="tab_betting_strategy">Betting Strategy</div>
       </div>
-      <div class="tab_section active_section" id="section_create_betting_strategy">
+      <div class="tab_section active_section" id="section_betting_strategy">
+<?php include("pages/betting/_betting.php"); ?>
       </div>
-      
-      <div class="tab_section" id="section_edit_betting_strategy">
-      </div>
-
     </div>
   </div>
-	
 </body>
 </html>

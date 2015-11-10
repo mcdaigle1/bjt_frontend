@@ -10,10 +10,7 @@
  ************************************************************************/
 
 /**
- * 
  * Player Strategy utilities
- * @author mdaigle
- *
  */
 Class StrategyUtil {
 	
