@@ -42,20 +42,24 @@ $(document).ready(function() {
         strategySetDescription: $("#player_strategy_description_input").val() 
       }
     }).done(function(data, status) {
+      var dataObj = JSON.parse(data);
+      processMessage(dataObj);
+
       $("#player_strategy_label_right").html(" - " + $("#player_strategy_name_input").val());
       $("#player_strategy_name_input").val("");
       $("#player_strategy_description_input").val("");
       $("#player_strategy_section").hide();
 
       load_player_select_dropdown(); 
+    }).fail(function(jqXHR, textStatus, errorThrown) {
+      processFailMessage(jqXHR, textStatus);
     });
-
   }); 
 
   // change the look of a strategy if a new strategy is selected
-  $(document.body).on('change', '.strategy_selector' ,function() {
+  $(document.body).on("change", ".strategy_selector", function() {
     var oldClass = $(this).attr('class');
-    $(this).removeClass(oldClass).addClass("strategy_" + $(this).find('option:selected').text()).addClass("strategy_selector");
+    $(this).removeClass(oldClass).addClass("strategy_" + $(this).find("option:selected").text()).addClass("strategy_selector");
   });
 
   // When the player strategy is selected, get the strategy set info and display it
@@ -71,12 +75,16 @@ $(document).ready(function() {
       }
     }).done(function(data, status) {
       var dataObj = JSON.parse(data);
+      processErrorMessage(dataObj);
+
       var playerStrategySet = dataObj.playerStrategySet["strategy_set"];
       var playerStrategySetArray = JSON.parse(playerStrategySet);
       // set the player strategy set globally
       globalPlayerStrategySet = playerStrategySetArray.slice();
       show_player_strategy_view();
       $("#player_strategy_edit_button_section").css('display', 'inline-block');
+    }).fail(function(jqXHR, textStatus, errorThrown) {
+      processFailMessage(jqXHR, textStatus);
     });
   });
 
@@ -93,12 +101,16 @@ $(document).ready(function() {
       }
     }).done(function(data, status) {
       var dataObj = JSON.parse(data);
+      processErrorMessage(dataObj);
+
       var dealerStrategySet = dataObj.dealerStrategySet["strategy_set"];
       var dealerStrategySetArray = JSON.parse(dealerStrategySet);
       // set the dealer strategy set globally
       globalDealerStrategySet = dealerStrategySetArray.slice();
       show_dealer_strategy_view();
       $("#dealer_strategy_edit_button_section").css('display', 'inline-block');
+    }).fail(function(jqXHR, textStatus, errorThrown) {
+      processFailMessage(jqXHR, textStatus);
     });
   });
 
@@ -169,6 +181,8 @@ function load_player_select_dropdown() {
     }
   }).done(function(data, status) {
     var dataObj = JSON.parse(data);
+    processErrorMessage(dataObj);
+
     var playerStrategyInfos = dataObj.playerStrategyInfo;
     var systemStrategyInfos = dataObj.systemStrategyInfo;
 
@@ -182,6 +196,8 @@ function load_player_select_dropdown() {
       options += "<option value='" + playerStrategyInfos[i]["id"] + "' class='player_strategy_option'>" + playerStrategyInfos[i]["name"] + "</option>";
     }
     $("#player_strategy_selector_dropdown").html(options);
+  }).fail(function(jqXHR, textStatus, errorThrown) {
+    processFailMessage(jqXHR, textStatus);
   });
 }
 
@@ -195,6 +211,8 @@ function load_dealer_select_dropdown() {
     }
   }).done(function(data, status) {
     var dataObj = JSON.parse(data);
+    processErrorMessage(dataObj);
+
     var dealerStrategyInfos = dataObj.dealerStrategyInfo;
     var systemStrategyInfos = dataObj.systemStrategyInfo;
 
@@ -208,6 +226,8 @@ function load_dealer_select_dropdown() {
       options += "<option value='" + dealerStrategyInfos[i]["id"] + "' class='dealer_strategy_option'>" + dealerStrategyInfos[i]["name"] + "</option>";
     }
     $("#dealer_strategy_selector_dropdown").html(options);
+  }).fail(function(jqXHR, textStatus, errorThrown) {
+    processFailMessage(jqXHR, textStatus);
   });
 }
 

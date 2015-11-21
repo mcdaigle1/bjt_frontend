@@ -20,14 +20,10 @@ if (!Session::isLoggedIn()) {
 
 <html>
 <head><meta http-equiv=content-type content="text/html; charset=UTF-8">
-		<link rel="SHORTCUT ICON" HREF="images/favicon.ico">
-		<link href="/css/main.css" rel="stylesheet" type="text/css">    
+<?php include("pages/global_includes.php"); ?>
 		<link href="/css/betting.css" rel="stylesheet" type="text/css">    
-		<link href="/css/tabs.css" rel="stylesheet" type="text/css">    
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="/js/betting.js"></script>
-    <script src="/js/tabs.js"></script>
-		<title>BlackJackTrack</title>
+		<title>BlackJackTrack - Betting</title>
 </head>
 
 <body>

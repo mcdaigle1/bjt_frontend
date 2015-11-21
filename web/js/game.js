@@ -22,6 +22,8 @@ $(document).ready(function() {
         }
       }).done(function(data, status) {
         var dataObj = JSON.parse(data);
+        processMessage(dataObj);
+
         gameDisplayInfo = dataObj.gameDisplayInfo;
         $("#game_name").html(gameDisplayInfo.name);
         $("#game_description").html(gameDisplayInfo.description);
@@ -36,6 +38,8 @@ $(document).ready(function() {
         } else {
           $("#end_at_zero").html("True");
         }
+      }).fail(function(jqXHR, textStatus, errorThrown) {
+        processFailMessage(jqXHR, textStatus);
       });
     }
   });
@@ -67,8 +71,12 @@ function getPlayerGames() {
     }
   }).done(function(data, status) {
     var dataObj = JSON.parse(data);
+    processErrorMessage(dataObj);
+
     playerGames = dataObj.playerGames;
     populatePlayerGamesSelector();
+  }).fail(function(jqXHR, textStatus, errorThrown) {
+    processFailMessage(jqXHR, textStatus);
   });
 }
 
@@ -81,9 +89,13 @@ function getAllGames() {
     }
   }).done(function(data, status) {
     var dataObj = JSON.parse(data);
+    processErrorMessage(dataObj);
+
     playerGames = dataObj.playerGames;
     systemGames = dataObj.systemGames;
     populateAllGamesSelector();
+  }).fail(function(jqXHR, textStatus, errorThrown) {
+    processFailMessage(jqXHR, textStatus);
   });
 }
 

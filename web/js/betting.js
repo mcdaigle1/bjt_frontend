@@ -14,23 +14,23 @@ function loadBettingSelectDropdown() {
     }
   }).done(function(data) {
     var dataObj = JSON.parse(data);
-    processDone(dataObj)
+    processErrorMessage(dataObj);
 
     var playerBettingInfos = dataObj.playerBettingInfo;
     var systemBettingInfos = dataObj.systemBettingInfo;
 
     var options = "";
-    if ($("#betting_checkbox").is(':checked')) {
+    /*if ($("#betting_checkbox").is(':checked')) {
       for (var i = 0; i < systemBettingInfos.length; i++) {
         options += "<option value='" + systemBettingInfos[i]["id"] + "' class='betting_option'>[" + systemBettingInfos[i]["name"] + "]</option>";
       }
     }
-    for (var i = 0; i < playerStrategyInfos.length; i++) {
+    for (var i = 0; i < playerBettingInfos.length; i++) {
       options += "<option value='" + playerBettingInfos[i]["id"] + "' class='betting_option'>" + playerBettingInfos[i]["name"] + "</option>";
     }
-    $("#betting_selector_dropdown").html(options);
+    $("#betting_selector_dropdown").html(options);*/
   }).fail(function(jqXHR, textStatus, errorThrown) {
-    processFail(jqXHR, textStatus)
+    processFailMessage(jqXHR, textStatus);
   });
 }
 
