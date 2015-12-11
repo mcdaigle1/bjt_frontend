@@ -112,11 +112,14 @@ CREATE TABLE IF NOT EXISTS dealer_hand (
     card_list       TEXT            NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS bet_rule (
+CREATE TABLE IF NOT EXISTS bet_strategy (
     id              INT             NOT NULL PRIMARY KEY AUTO_INCREMENT,
     create_time     TIMESTAMP       NOT NULL,
     mod_time        TIMESTAMP       NOT NULL,
-    description     VARCHAR(256),
+    name            VARCHAR(256)    NOT NULL,
+    description     VARCHAR(1024),
+    status          INT             NOT NULL,
     player_id       INT             NOT NULL,
+    strategy_json   VARCHAR(2048)   NOT NULL
 );
 

@@ -25,7 +25,7 @@ include_once("config/init.php");
   <?php
     l_err("logging out");
     Session::logOut();
-    header("Location: /pages/home.php");
+    header("Location: /view/home.php");
 	?>
   </div>
 

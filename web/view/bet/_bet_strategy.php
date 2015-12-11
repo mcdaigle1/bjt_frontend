@@ -8,7 +8,7 @@
  * express written permission of an authorized representative of
  * Blue Cask Software..
  ************************************************************************/
-include_once("util/BetRuleUtil.php");
+include_once("util/BetStrategyUtil.php");
 ?>
 <hr class='bet_selector_hr'>
 <div class='bet_selector_section'>
@@ -48,13 +48,13 @@ include_once("util/BetRuleUtil.php");
     <div class='bet_input_section_label'>Starting Bet</div>
     <div class='bet_radio_input_section'>
        <div class='bet_radio_input'>
-         <input id='start_bet_minimum' type="radio" name="radio_win_start_bet" checked>
+         <input id='start_bet_minimum' type="radio" name="radio_start_bet" checked>
        </div>
        <div class='bet_radio_input_label'>Game minimum</div>
     </div>
     <div class='bet_radio_input_section'>
        <div class='bet_radio_input'>
-         <input id='start_bet_minimum_times' type="radio" name="radio_win_start_bet">
+         <input id='start_bet_minimum_times' type="radio" name="radio_start_bet">
        </div>
        <div class='bet_radio_input_label'>Game minimum X </div>
        <div class='bet_multiplier_input_field'>
@@ -122,16 +122,16 @@ include_once("util/BetRuleUtil.php");
     <div class='bet_input_subsection_label'>Repeat:</div>
     <div class='bet_radio_input_section'>
        <div class='bet_radio_input'>
-         <input id='win_bet_repeat_forever' type="radio" name="radio_win_repeat_bet" checked>
+         <input id='win_repeat_forever' type="radio" name="radio_win_repeat_bet" checked>
        </div>
        <div class='bet_radio_input_label'>Forever</div>
     </div>
     <div class='bet_radio_input_section'>
        <div class='bet_radio_input'>
-         <input id='win_bet_repeat_times' type="radio" name="radio_win_repeat_bet">
+         <input id='win_repeat_times' type="radio" name="radio_win_repeat_bet">
        </div>
        <div class='bet_multiplier_input_field'>
-         <input id='win_bet_repeat_times_multiplier' class='bet_multiplier_input' type='text'>
+         <input id='win_repeat_times_multiplier' class='bet_multiplier_input' type='text'>
        </div>
        <div class='bet_radio_input_label'>times then return to starting bet</div>
     </div>
@@ -194,13 +194,13 @@ include_once("util/BetRuleUtil.php");
     <div class='bet_input_subsection_label'>Repeat:</div>
     <div class='bet_radio_input_section'>
        <div class='bet_radio_input'>
-         <input id='lose_repeat_forever' type="radio" name="radio_loss_repeat_bet" checked>
+         <input id='lose_repeat_forever' type="radio" name="radio_lose_repeat_bet" checked>
        </div>
        <div class='bet_radio_input_label'>Forever</div>
     </div>
     <div class='bet_radio_input_section'>
        <div class='bet_radio_input'>
-         <input id='lose_repeat_times' type="radio" name="radio_loss_repeat_bet">
+         <input id='lose_repeat_times' type="radio" name="radio_lose_repeat_bet">
        </div>
        <div class='bet_multiplier_input_field'>
          <input id='lose_repeat_times_multiplier' class='bet_multiplier_input' type='text'>

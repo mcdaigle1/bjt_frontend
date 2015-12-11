@@ -15,7 +15,7 @@ $(document).ready(function() {
     if (selectValue != "default") {
       $.ajax({
         type: 'POST',
-        url: "/handlers/gameHandler.php",
+        url: "/control/gameController.php",
         data: {
           getGameDisplayInfo: "true",
           gameId: gameId
@@ -65,7 +65,7 @@ $(document).ready(function() {
 function getPlayerGames() {
   $.ajax({
     type: 'POST',
-    url: "/handlers/gameHandler.php",
+    url: "/control/gameController.php",
     data: {
       getGames: "true"
     }
@@ -83,7 +83,7 @@ function getPlayerGames() {
 function getAllGames() {
   $.ajax({
     type: 'POST',
-    url: "/handlers/gameHandler.php",
+    url: "/control/gameController.php",
     data: {
       getGames: "true"
     }

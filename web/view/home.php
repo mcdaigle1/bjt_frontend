@@ -18,16 +18,15 @@ session_start();
 
 <html>
 	<head><meta http-equiv=content-type content="text/html; charset=UTF-8">
-		<link rel="SHORTCUT ICON" HREF="images/favicon.ico">
-		<link href="/css/main.css" rel="stylesheet" type="text/css">    
-		<title>BlackJackTrack</title>
+<?php include("view/global_includes.php"); ?>
+		<title>BlackJackTrack - Home</title>
 	</head>
 
   	<body>
 
 	<div class="main_content">
 <?php
-  include("pages/header.php");  
+  include("view/header.php");  
 ?>
     
 	</div>

@@ -182,10 +182,14 @@ a:visited.menu_item_disabled {
   width: 600px;
   left: 403px;
   top: 300px;
-  padding: 2px 2px 2px 10px;
-  border: 2px solid white;
-  font-size: 12pt;
+  border: 1px solid black;
+  font-size: 11pt;
   background-color: black;
+}
+
+.message_box_inner_border {
+  border: 1px solid white;
+  padding: 2px 2px 2px 10px;
 }
 
 .message_content {

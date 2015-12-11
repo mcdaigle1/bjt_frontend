@@ -67,7 +67,7 @@ $dealerFirstCardAbbrevs = DealerStrategyUtil::getFirstCardAbbrevArray();
     </table>
   </div>
   <div class = 'legend_section'> 
-<?php include("pages/strategy/_player_strategy_legend.php"); ?>
+<?php include("view/strategy/_player_strategy_legend.php"); ?>
   </div>
 </div>
 <div class='strategy_create_section' id='player_strategy_create_section'>

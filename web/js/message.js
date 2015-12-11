@@ -1,5 +1,5 @@
 var DEFAULT_SUCCESS_TIMEOUT_SECS = 3
-var DEFAULT_ERROR_TIMEOUT_SECS = 4
+var DEFAULT_ERROR_TIMEOUT_SECS = 0
 
 $(document).ready(function() {
   // if the x is selected in the message box, hide the message
@@ -12,27 +12,25 @@ $(document).ready(function() {
 // Process ajax result data for display purposes.  This will display a message in the case 
 // of processing success or error.
 // params:
-//   data - the data object returned from an ajax call
-//   displaySecs - int holding the number of seconds the message will display in case of success.  
-//                 If undefined, success will display for DEFAULT_SUCCESS_TIMEOUT_SECS.  Error messages
-//                 will always display for DEFAULT_ERROR_TIMEOUT_SECS
-function processMessage(data, displaySecs) {
-  if (data.result == "success") {
-    showSuccessMessage(data.message, displaySecs);
+//   dataObj - the data object returned from an ajax call
+function processMessage(dataObj, displaySecs) {
+  if (dataObj.result == "success") {
+    showSuccessMessage(dataObj.message, displaySecs);
   } else {
-    showErrorMessage(data.message);
+    showErrorMessage(dataObj.message, displaySecs);
+    
   }
 }
 
 // Process ajax result data for display purposes.  This will display a message in the case 
 // of processing error.
 // params:
-//   data - the data object returned from an ajax call
+//   dataObj - the data object returned from an ajax call
 //   displaySecs - int holding the number of seconds the message will display or undefined
 //                 for system default DEFAULT_ERROR_TIMEOUT_SECS
-function processErrorMessage(data, displaySecs) {
-  if (data.result == "error") {
-    showErrorMessage(data.message, displaySecs);
+function processErrorMessage(dataObj, displaySecs) {
+  if (dataObj.result == "error") {
+    showErrorMessage(dataObj.message, displaySecs);
   }
 }
 
@@ -59,7 +57,7 @@ function showSuccessMessage(message, displaySecs) {
   $("#message_content").html(successHtml); 
   $("#message_box").css('visibility', 'visible');
 
-  if (displaySecs == undefined) {
+  if (typeof displaySecs === "undefined") {
     displaySecs = DEFAULT_SUCCESS_TIMEOUT_SECS;
   }
   if (displaySecs > 0) {

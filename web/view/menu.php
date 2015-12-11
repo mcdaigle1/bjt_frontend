@@ -30,13 +30,13 @@ include_once("session/Session.php");
 		$menu->menuItem("HOME", "home", $pageName);
    	$menu->menuItem("GAME", "game/game", $pageName);
    	$menu->menuItem("STRATEGY", "strategy/strategy", $pageName);
-   	$menu->menuItem("BETTING", "betting/betting", $pageName);
+   	$menu->menuItem("BETTING", "bet/bet", $pageName);
 		$menu->menuItem("LOGOUT", "logout", $pageName);
 	} else {
 		$menu->menuItem("HOME", "home", $pageName, true);
    	$menu->menuItem("GAME", "game/game", $pageName, true);
    	$menu->menuItem("STRATEGY", "strategy/strategy", $pageName, true);
-   	$menu->menuItem("BETTING", "betting/betting", $pageName, true);
+   	$menu->menuItem("BETTING", "bet/bet", $pageName, true);
 		$menu->menuItem("LOGIN", "login", $pageName);
 	}
 ?>

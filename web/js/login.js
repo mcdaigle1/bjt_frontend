@@ -10,7 +10,7 @@ $(document).ready(function() {
 
     $.ajax({
       type: 'POST',
-      url: "/handlers/loginHandler.php",
+      url: "/control/loginController.php",
       data: { 
         submitLogin: "true",
         userEmail: $("#login_user_email").val(),

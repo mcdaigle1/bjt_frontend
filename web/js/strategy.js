@@ -34,9 +34,9 @@ $(document).ready(function() {
     // make a call to create the new strategy
     $.ajax({
       type: 'POST',
-      url: "/handlers/playerStrategyHandler.php",
+      url: "/control/playerStrategyController.php",
       data: { 
-        createPlayerStrategySet: "true", 
+        action: "createPlayerStrategySet", 
         strategySet: JSON.stringify(strategySet), 
         strategySetName: $("#player_strategy_name_input").val(), 
         strategySetDescription: $("#player_strategy_description_input").val() 
@@ -68,9 +68,9 @@ $(document).ready(function() {
 
     $.ajax({
       type: 'POST',
-      url: "/handlers/playerStrategyHandler.php",
+      url: "/control/playerStrategyController.php",
       data: {
-        getPlayerStrategySet: "true",
+        action: "getPlayerStrategySet",
         strategyId: strategy_id
       }
     }).done(function(data, status) {
@@ -94,9 +94,9 @@ $(document).ready(function() {
 
     $.ajax({
       type: 'POST',
-      url: "/handlers/dealerStrategyHandler.php",
+      url: "/control/dealerStrategyController.php",
       data: {
-        getDealerStrategySet: "true",
+        action: "getDealerStrategySet",
         strategyId: strategy_id
       }
     }).done(function(data, status) {
@@ -175,9 +175,9 @@ $(document).ready(function() {
 function load_player_select_dropdown() {
   $.ajax({
     type: 'POST',
-    url: "/handlers/playerStrategyHandler.php",
+    url: "/control/playerStrategyController.php",
     data: {
-      getPlayerStrategyInfo: "true"
+      action:"getPlayerStrategyInfo"
     }
   }).done(function(data, status) {
     var dataObj = JSON.parse(data);
@@ -205,9 +205,9 @@ function load_player_select_dropdown() {
 function load_dealer_select_dropdown() {
   $.ajax({
     type: 'POST',
-    url: "/handlers/dealerStrategyHandler.php",
+    url: "/control/dealerStrategyController.php",
     data: {
-      getDealerStrategyInfo: "true"
+      action: "getDealerStrategyInfo"
     }
   }).done(function(data, status) {
     var dataObj = JSON.parse(data);

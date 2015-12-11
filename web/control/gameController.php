@@ -109,6 +109,6 @@ if (array_key_exists('getGames', $_POST)) {
     echo(json_encode($result));
   }
 } else { 
-  $result = array("result" => "error", "message" => "Could not find valid action for strategyHandler");
+  $result = array("result" => "error", "message" => "Could not find valid action for gameController");
 }
 ?>

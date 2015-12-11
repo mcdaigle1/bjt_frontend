@@ -10,8 +10,8 @@
  ************************************************************************/
 $pageName="submit";
 include("database/DbConnection.php");
-include("pages/header.php"); 
-include("pages/menu.php");
+include("view/header.php"); 
+include("view/menu.php");
 
 $DOWNLOAD_SIZE_MB = 5;
 ?>

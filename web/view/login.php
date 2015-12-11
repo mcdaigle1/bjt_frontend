@@ -16,12 +16,10 @@ include_once("data-access/PlayerExistsException.php");
 
 <html>
   <head><meta http-equiv=content-type content="text/html; charset=UTF-8">
-    <link rel="SHORTCUT ICON" href="/images/favicon.ico">
-    <link href="/css/main.css" rel="stylesheet" type="text/css"> 
+<?php include("view/global_includes.php"); ?>
     <link href="/css/login.css" rel="stylesheet" type="text/css">      
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="/js/login.js"></script>
-    <title>BlackJackTrack</title>
+    <title>BlackJackTrack - Login</title>
   </head>
 
   <body>
@@ -29,7 +27,7 @@ include_once("data-access/PlayerExistsException.php");
   <div class="main_content">
 <?php 
    // show the header
-  include("pages/header.php"); 
+  include("view/header.php"); 
 ?>              
 <div class='login_title'>Log In</div>
 <div>

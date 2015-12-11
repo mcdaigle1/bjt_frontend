@@ -9,18 +9,19 @@
  * Blue Cask Software..
  ************************************************************************/
 include_once("config/init.php");
-
 ?>
 
 <div class="main_logo">
   <div class="message_box" id="message_box">
+  <div class="message_box_inner_border">
     <div class="message_content" id="message_content"></div>
     <div class="message_x" id="message_x">
       <img class="message_x_image" src="/images/x_25_25.jpg">
     </div>
   </div>
+  </div>
     
-	<a href="/pages/home.php"><img src="/images/bjt_header.jpg"></a>
+	<a href="/view/home.php"><img src="/images/bjt_header.jpg"></a>
 <?php
   if (!Session::isLoggedIn()) {
     if (session_status() == PHP_SESSION_NONE) {
@@ -28,7 +29,7 @@ include_once("config/init.php");
     }
   }
 
-	include("pages/menu.php");
-	include("pages/message_banner.php");
+	include("view/menu.php");
+	include("view/message_banner.php");
 ?>
 </div>

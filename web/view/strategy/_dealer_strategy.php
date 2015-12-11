@@ -50,7 +50,7 @@ $dealerHandAbbrevs = DealerStrategyUtil::getHandAbbrevArray();
     </table>
   </div>
   <div class = 'legend_section'> 
-<?php include("pages/strategy/_dealer_strategy_legend.php"); ?>
+<?php include("view/strategy/_dealer_strategy_legend.php"); ?>
   </div>
 </div>
 <div class='strategy_create_section' id='dealer_strategy_create_section'>

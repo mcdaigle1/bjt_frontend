@@ -12,7 +12,7 @@
 /**
  * Betting utilities
  */
-Class BettingUtil {
+Class BetStrategyUtil {
 	
 }
 ?>

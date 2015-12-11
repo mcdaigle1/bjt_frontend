@@ -12,7 +12,7 @@ $pageName="game/game";
 include_once("config/init.php");
 
 if (!Session::isLoggedIn()) {
-  header("Location: /pages/home.php");
+  header("Location: /view/home.php");
   exit(); 
 }
 
@@ -20,7 +20,7 @@ if (!Session::isLoggedIn()) {
 
 <html>
 <head><meta http-equiv=content-type content="text/html; charset=UTF-8">
-<?php include("pages/global_includes.php"); ?>
+<?php include("view/global_includes.php"); ?>
 		<link href="/css/game.css" rel="stylesheet" type="text/css">    
     <script src="/js/game.js"></script>
 		<title>BlackJackTrack - Game</title>
@@ -28,7 +28,7 @@ if (!Session::isLoggedIn()) {
 
 <body>
   <div class="main_content">
-<?php include("pages/header.php"); ?>
+<?php include("view/header.php"); ?>
     <div class="page_content">
       <div class="tabs">
         <div class="tab active_tab" id="tab_play_game">Play Game</div>
@@ -36,15 +36,15 @@ if (!Session::isLoggedIn()) {
         <div class="tab inactive_tab" id="tab_edit_game">Edit Game</div>
       </div>
       <div class="tab_section active_section" id="section_play_game">
-<?php include("pages/game/_play_game.php"); ?>
+<?php include("view/game/_play_game.php"); ?>
       </div>
       
       <div class="tab_section" id="section_create_game">
-<?php include("pages/game/_create_game.php"); ?>
+<?php include("view/game/_create_game.php"); ?>
       </div>
 
       <div class="tab_section" id="section_edit_game">
-<?php include("pages/game/_edit_game.php"); ?>
+<?php include("view/game/_edit_game.php"); ?>
       </div>
     </div>
   </div>

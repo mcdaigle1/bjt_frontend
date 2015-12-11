@@ -12,7 +12,7 @@ $pageName="strategy/strategy";
 include_once("config/init.php");
 
 if (!Session::isLoggedIn()) {
-  header("Location: /pages/home.php");
+  header("Location: /view/home.php");
   exit(); 
 }
 
@@ -20,7 +20,7 @@ if (!Session::isLoggedIn()) {
 
 <html>
 <head><meta http-equiv=content-type content="text/html; charset=UTF-8">
-<?php include("pages/global_includes.php"); ?>
+<?php include("view/global_includes.php"); ?>
 		<link href="/css/strategy.css" rel="stylesheet" type="text/css">    
     <script src="/js/strategy.js"></script>
 		<title>BlackJackTrack - Strategy</title>
@@ -30,18 +30,18 @@ if (!Session::isLoggedIn()) {
   <div class="hidden_field" id='tab_index'><?php if (array_key_exists("t", $_GET)) {echo $_GET["t"];}; ?></div>
 
   <div class="main_content">
-<?php include("pages/header.php"); ?>
+<?php include("view/header.php"); ?>
     <div class="page_content">
       <div class="tabs">
         <div class="tab inactive_tab" id="tab_player_strategy">Player Strategy</div>
         <div class="tab inactive_tab" id="tab_dealer_strategy">Dealer Strategy</div>
       </div>
       <div class="tab_section active_section" id="section_player_strategy">
-<?php include("pages/strategy/_player_strategy.php"); ?>
+<?php include("view/strategy/_player_strategy.php"); ?>
       </div>
       
       <div class="tab_section" id="section_dealer_strategy">
-<?php include("pages/strategy/_dealer_strategy.php"); ?>
+<?php include("view/strategy/_dealer_strategy.php"); ?>
       </div>
 
     </div>

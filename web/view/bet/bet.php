@@ -1,5 +1,5 @@
 <?php
-$pageName="betting/betting";
+$pageName="bet/bet";
 /***********************************************************************
  * Copyright 2015 Blue Cask Software. All rights reserved.
  *                                                                                                                       
@@ -12,7 +12,7 @@ $pageName="betting/betting";
 include_once("config/init.php");
 
 if (!Session::isLoggedIn()) {
-  header("Location: /pages/home.php");
+  header("Location: /view/home.php");
   exit(); 
 }
 
@@ -20,21 +20,21 @@ if (!Session::isLoggedIn()) {
 
 <html>
 <head><meta http-equiv=content-type content="text/html; charset=UTF-8">
-<?php include("pages/global_includes.php"); ?>
-		<link href="/css/betting.css" rel="stylesheet" type="text/css">    
-    <script src="/js/betting.js"></script>
+<?php include("view/global_includes.php"); ?>
+		<link href="/css/bet.css" rel="stylesheet" type="text/css">    
+    <script src="/js/bet.js"></script>
 		<title>BlackJackTrack - Betting</title>
 </head>
 
 <body>
   <div class="main_content">
-<?php include("pages/header.php"); ?>
+<?php include("view/header.php"); ?>
     <div class="page_content">
       <div class="tabs">
-        <div class="tab active_tab" id="tab_betting_strategy">Betting Strategy</div>
+        <div class="tab active_tab" id="tab_bet_strategy">Betting Strategy</div>
       </div>
-      <div class="tab_section active_section" id="section_betting_strategy">
-<?php include("pages/betting/_betting.php"); ?>
+      <div class="tab_section active_section" id="section_bet_strategy">
+<?php include("view/bet/_bet_strategy.php"); ?>
       </div>
     </div>
   </div>
